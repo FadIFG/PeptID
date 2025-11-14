@@ -1,0 +1,13 @@
+# MHpeptide is the quasimolecular ion M+H (single charged non-fragmented Peptide)
+
+
+To test for a peptide with a lenght of 3 or 4 AAs, load the PeptID function then run it:
+
+PeptID (389.2033)
+
+To test for a peptide with a lenght of 5-AAs  
+#PeptID (569.4034)
+
+#Save the results in a variabl, for example: checkIfPeptide <- PeptID(985.5036) 
+
+Note that 985.5036 is M+H for Adrenorphin (sequence: YGGFMRRV)
