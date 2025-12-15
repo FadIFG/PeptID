@@ -12,6 +12,13 @@
 
 #Note that 985.5036 is M+H for Adrenorphin (sequence: YGGFMRRV)
 
+wd <- dirname(rstudioapi::getActiveDocumentContext()$path) #extracting the current path of the folder where this R file is located
+setwd(wd)  # setting wd as the working directory
+# The folowing are functions needed in the code and are included in the folder "Functions"
+source("Functions/Combine_Matrices_Dif_Sizes.R")     #to combine two matrices of different dimensions
+
+
+
 PeptID <- function(MHPeptide){
 Water <- 18.0106
 H <- 1.0073
@@ -37,7 +44,6 @@ AAx2 <-  c(57.0215,71.0371,87.032,97.0528,99.0684,101.0477,103.0092,113.0841,114
            128.0586,128.095,129.0426,131.0405,137.0589,147.0684,156.1011,163.0633,186.0793)
 
 
-source("U:/gem61066/Fadi/R_Functions/combine_Matrices_dif_Sizes.R") 
 CandidateAAall <- matrix( nrow = 1, ncol = 1)
 
 
@@ -161,4 +167,5 @@ CandidateAA <- CandidateAAall
 
 if(nrow(CandidateAA)==1){paste("Feature", MHPeptide,"might not be a Peptide.")}
 else{return(CandidateAA)} 
+
 }
